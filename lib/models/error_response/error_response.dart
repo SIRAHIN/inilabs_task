@@ -1,16 +1,16 @@
-// import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-// part 'error_response.freezed.dart';
-// part 'error_response.g.dart';
+part 'error_response.freezed.dart';
+part 'error_response.g.dart';
 
-// @freezed
-// class ErrorResponse with _$ErrorResponse {
-//   const factory ErrorResponse({
-//     String? message,
-//     @JsonKey(name: 'documentation_url') String? documentationUrl,
-//     int? status,
-//   }) = _ErrorResponse;
+@freezed
+abstract class ErrorResponse with _$ErrorResponse {
+  const factory ErrorResponse({
+    String? message,
+    @JsonKey(name: 'documentation_url') String? documentationUrl,
+    int? status,
+  }) = _ErrorResponse;
 
-//   factory ErrorResponse.fromJson(Map<String, dynamic> json) =>
-//       _$ErrorResponseFromJson(json);
-// }
+  factory ErrorResponse.fromJson(Map<String, dynamic> json) =>
+      _$ErrorResponseFromJson(json);
+}
