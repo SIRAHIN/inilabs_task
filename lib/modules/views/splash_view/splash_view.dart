@@ -30,7 +30,7 @@ class _SplashViewState extends State<SplashView>
     _controller.forward();
 
     Timer(const Duration(seconds: 3), () {
-      Get.offNamed(RoutesName.homeView);
+      Get.offNamed(RoutesName.userInputView);
     });
   }
 

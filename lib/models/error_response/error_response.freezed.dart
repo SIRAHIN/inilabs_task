@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ErrorResponse {
 
- String? get message;@JsonKey(name: 'documentation_url') String? get documentationUrl; int? get status;
+ String? get message;@JsonKey(name: 'documentation_url') String? get documentationUrl; String? get status;
 /// Create a copy of ErrorResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $ErrorResponseCopyWith<$Res>  {
   factory $ErrorResponseCopyWith(ErrorResponse value, $Res Function(ErrorResponse) _then) = _$ErrorResponseCopyWithImpl;
 @useResult
 $Res call({
- String? message,@JsonKey(name: 'documentation_url') String? documentationUrl, int? status
+ String? message,@JsonKey(name: 'documentation_url') String? documentationUrl, String? status
 });
 
 
@@ -70,7 +70,7 @@ class _$ErrorResponseCopyWithImpl<$Res>
 message: freezed == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
 as String?,documentationUrl: freezed == documentationUrl ? _self.documentationUrl : documentationUrl // ignore: cast_nullable_to_non_nullable
 as String?,status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
-as int?,
+as String?,
   ));
 }
 
@@ -155,7 +155,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? message, @JsonKey(name: 'documentation_url')  String? documentationUrl,  int? status)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? message, @JsonKey(name: 'documentation_url')  String? documentationUrl,  String? status)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _ErrorResponse() when $default != null:
 return $default(_that.message,_that.documentationUrl,_that.status);case _:
@@ -176,7 +176,7 @@ return $default(_that.message,_that.documentationUrl,_that.status);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? message, @JsonKey(name: 'documentation_url')  String? documentationUrl,  int? status)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? message, @JsonKey(name: 'documentation_url')  String? documentationUrl,  String? status)  $default,) {final _that = this;
 switch (_that) {
 case _ErrorResponse():
 return $default(_that.message,_that.documentationUrl,_that.status);case _:
@@ -196,7 +196,7 @@ return $default(_that.message,_that.documentationUrl,_that.status);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? message, @JsonKey(name: 'documentation_url')  String? documentationUrl,  int? status)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? message, @JsonKey(name: 'documentation_url')  String? documentationUrl,  String? status)?  $default,) {final _that = this;
 switch (_that) {
 case _ErrorResponse() when $default != null:
 return $default(_that.message,_that.documentationUrl,_that.status);case _:
@@ -216,7 +216,7 @@ class _ErrorResponse implements ErrorResponse {
 
 @override final  String? message;
 @override@JsonKey(name: 'documentation_url') final  String? documentationUrl;
-@override final  int? status;
+@override final  String? status;
 
 /// Create a copy of ErrorResponse
 /// with the given fields replaced by the non-null parameter values.
@@ -251,7 +251,7 @@ abstract mixin class _$ErrorResponseCopyWith<$Res> implements $ErrorResponseCopy
   factory _$ErrorResponseCopyWith(_ErrorResponse value, $Res Function(_ErrorResponse) _then) = __$ErrorResponseCopyWithImpl;
 @override @useResult
 $Res call({
- String? message,@JsonKey(name: 'documentation_url') String? documentationUrl, int? status
+ String? message,@JsonKey(name: 'documentation_url') String? documentationUrl, String? status
 });
 
 
@@ -273,7 +273,7 @@ class __$ErrorResponseCopyWithImpl<$Res>
 message: freezed == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
 as String?,documentationUrl: freezed == documentationUrl ? _self.documentationUrl : documentationUrl // ignore: cast_nullable_to_non_nullable
 as String?,status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
-as int?,
+as String?,
   ));
 }
 

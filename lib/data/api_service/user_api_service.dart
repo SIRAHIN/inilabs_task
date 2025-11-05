@@ -22,8 +22,9 @@ abstract class UserApiService {
   Dio client = Dio(
     BaseOptions(
       baseUrl: AppUrl.baseUrl,
-      connectTimeout: const Duration(seconds: 30),
-      receiveTimeout: const Duration(seconds: 30),
+      sendTimeout: Duration(seconds: 10),
+      connectTimeout: const Duration(seconds: 5),
+      receiveTimeout: const Duration(seconds: 10),
       responseType: ResponseType.json,
       contentType: "application/json",
     ),

@@ -8,7 +8,7 @@ abstract class ErrorResponse with _$ErrorResponse {
   const factory ErrorResponse({
     String? message,
     @JsonKey(name: 'documentation_url') String? documentationUrl,
-    int? status,
+    String? status,
   }) = _ErrorResponse;
 
   factory ErrorResponse.fromJson(Map<String, dynamic> json) =>

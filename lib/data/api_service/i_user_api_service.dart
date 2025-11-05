@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:inilabs_task/core/utils/constants/app_url.dart';
@@ -29,23 +30,23 @@ class IUserApiService extends UserApiService {
         case DioExceptionType.connectionTimeout:
           return ErrorResponse(
             message: 'No internet connection. Please check your network.',
-            status: 408,
+            status: '408',
           );
         case DioExceptionType.sendTimeout:
           return ErrorResponse(
             message: 'Request timeout. The server took too long to respond.',
-            status: 408,
+            status: '408',
           );
         case DioExceptionType.receiveTimeout:
           return ErrorResponse(
             message:
                 'Response timeout. The server is taking too long to send data.',
-            status: 408,
+            status: '408',
           );
         case DioExceptionType.connectionError:
           return ErrorResponse(
             message: 'No internet connection. Please check your network.',
-            status: 0,
+            status: '0',
           );
         case DioExceptionType.badResponse:
           return checkResponseError(error);
@@ -55,10 +56,10 @@ class IUserApiService extends UserApiService {
     } else if (error is SocketException) {
       return ErrorResponse(
         message: 'No internet connection. Please check your network.',
-        status: 0,
+        status: '0',
       );
     } else {
-      return ErrorResponse(message: error.toString(), status: 0);
+      return ErrorResponse(message: error.toString(), status: '0');
     }
   }
 
@@ -67,6 +68,15 @@ class IUserApiService extends UserApiService {
     required String userName,
   }) async {
     try {
+      final connectivityResult = await Connectivity().checkConnectivity();
+      if (connectivityResult.contains(ConnectivityResult.none)) {
+        return left(
+          ErrorResponse(
+            message: 'No internet connection. Please check your network.',
+            status: '0',
+          ),
+        );
+      }
       Response response = await client.get(AppUrl.getUser(userName: userName));
       var result = UserResponse.fromJson(response.data);
       return right(result);

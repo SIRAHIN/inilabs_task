@@ -10,7 +10,7 @@ _ErrorResponse _$ErrorResponseFromJson(Map<String, dynamic> json) =>
     _ErrorResponse(
       message: json['message'] as String?,
       documentationUrl: json['documentation_url'] as String?,
-      status: (json['status'] as num?)?.toInt(),
+      status: json['status'] as String?,
     );
 
 Map<String, dynamic> _$ErrorResponseToJson(_ErrorResponse instance) =>
