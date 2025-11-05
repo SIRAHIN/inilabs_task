@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:inilabs_task/core/utils/constants/app_url.dart';
 import 'package:inilabs_task/models/error_response/error_response.dart';
+import 'package:inilabs_task/models/repos_response/repos_response.dart';
 import 'package:inilabs_task/models/user_response/user_response.dart';
 
 abstract class UserApiService {
@@ -28,5 +29,7 @@ abstract class UserApiService {
     ),
   );
 
-  Future<Either<ErrorResponse, UserResponse>> getUser();
+  Future<Either<ErrorResponse, UserResponse>> getUser({required String userName});
+
+  Future<Either<ErrorResponse, List<ReposResponse>>> getRepos({required String userName});
 }
