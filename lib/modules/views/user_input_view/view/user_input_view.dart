@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:inilabs_task/models/user_response/user_response.dart';
 import 'package:inilabs_task/modules/views/user_input_view/controller/user_input_controller.dart';
 import 'package:inilabs_task/routes/routes_name.dart';
 

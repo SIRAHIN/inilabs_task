@@ -1,5 +1,6 @@
 
 import 'package:get/get.dart';
+import 'package:inilabs_task/modules/views/home_view/binding/home_view_binding.dart';
 import 'package:inilabs_task/modules/views/home_view/view/home_view.dart';
 import 'package:inilabs_task/modules/views/repo_details_view/view/repo_details_view.dart';
 import 'package:inilabs_task/modules/views/splash_view/splash_view.dart';
@@ -16,6 +17,7 @@ List<GetPage<dynamic>>? routes = [
   GetPage(
     name: RoutesName.homeView,
     page: () => const HomeView(),
+    binding: HomeViewBinding(),
   ),
   GetPage(
     name: RoutesName.repoDetailsView,
