@@ -119,9 +119,24 @@ lib/
 For detailed usage examples, see each respective folder and check the code comments.
 
 == App ScreenShots ==
-<img width="390" height="844" alt="Screenshot_1762409431" src="https://github.com/user-attachments/assets/2d273207-0c4a-48b7-818e-eca0208a6ee0" />
-<img width="390" height="844" alt="Screenshot_1762408366" src="https://github.com/user-attachments/assets/4355746c-abc9-4c44-9840-87391a36918e" />
-<img width="390" height="844" alt="Screenshot_1762416480" src="https://github.com/user-attachments/assets/fad5b25b-e2bb-49f4-a385-0b49f89f163c" />
+== Splash ==
+<img width="360" height="640" alt="splash" src="https://github.com/user-attachments/assets/b1fd4d25-1053-4ed5-bf83-1fe81bf5b40a" />
+
+== User Input Page (Light & Dark) ==
+<img width="360" height="640" alt="input_light" src="https://github.com/user-attachments/assets/cf77fbfb-68a5-4258-b2a3-b1d073c1e206" />
+
+<img width="360" height="640" alt="input_dark" src="https://github.com/user-attachments/assets/517b1d6e-c216-4248-bbc6-4d14dc4a3f03" />
+
+== User Profile Page (Light & Dark) ==
+<img width="360" height="640" alt="profile_light" src="https://github.com/user-attachments/assets/a0ba99f9-c848-45d1-84f4-dd555aad4df3" />
+
+<img width="360" height="640" alt="profile_dark" src="https://github.com/user-attachments/assets/9b989f40-6f8e-49fb-99b7-80e009a0f181" />
+
+== Repo Details Page (Light & Dark) ==
+<img width="360" height="640" alt="details_light" src="https://github.com/user-attachments/assets/8710824f-7008-40b7-8a04-8f1517d641d7" />
+
+<img width="360" height="640" alt="details_dark" src="https://github.com/user-attachments/assets/f74652c3-0d0a-4420-bef9-8ff66584ed89" />
+
 
 
 
