@@ -15,6 +15,8 @@ class HomeView extends GetView<HomeController> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
+        foregroundColor: Theme.of(context).colorScheme.primary,
+        automaticallyImplyLeading: true,
         elevation: 0,
         backgroundColor: Theme.of(context).colorScheme.surface,
         title: Text(
@@ -83,8 +85,8 @@ class HomeView extends GetView<HomeController> {
       ),
       body: Column(
         children: [
-          buildUserInfo(controller),
-          buildSearchBar(controller),
+          buildUserInfo(controller, context),
+          buildSearchBar(controller, context),
           Expanded(
             child: Obx(() {
               if (controller.isLoading) {
@@ -111,8 +113,8 @@ class HomeView extends GetView<HomeController> {
               }
 
               return controller.isGridView
-                  ? buildGridView(controller)
-                  : buildListView(controller);
+                  ? buildGridView(controller, context)
+                  : buildListView(controller, context);
             }),
           ),
         ],

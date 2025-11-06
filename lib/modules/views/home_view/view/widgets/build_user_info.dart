@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:inilabs_task/modules/views/home_view/controller/home_view_controller.dart';
 
-Widget buildUserInfo(HomeController controller) {
+Widget buildUserInfo(HomeController controller, BuildContext context) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Theme.of(context).colorScheme.surface,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
+            color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),
@@ -24,7 +24,7 @@ Widget buildUserInfo(HomeController controller) {
                 ? NetworkImage(controller.userData.avatarUrl!)
                 : null,
             child: controller.userData.avatarUrl == null
-                ? const Icon(Icons.person, size: 30)
+                ? Icon(Icons.person, size: 30, color: Theme.of(context).colorScheme.primary)
                 : null,
           ),
           const SizedBox(width: 16),
@@ -34,7 +34,8 @@ Widget buildUserInfo(HomeController controller) {
               children: [
                 Text(
                   controller.userData.name ?? 'Unknown User',
-                  style: const TextStyle(
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.primary,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -43,7 +44,7 @@ Widget buildUserInfo(HomeController controller) {
                   '@${controller.userData.login ?? 'username'}',
                   style: TextStyle(
                     fontSize: 14,
-                    color: Colors.grey[600],
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
                 const SizedBox(height: 4),
@@ -51,7 +52,7 @@ Widget buildUserInfo(HomeController controller) {
                       '${controller.repositories.length} repositories',
                       style: TextStyle(
                         fontSize: 12,
-                        color: Colors.grey[500],
+                        color: Theme.of(context).colorScheme.primary,
                       ),
                     )),
               ],
