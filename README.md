@@ -117,9 +117,11 @@ lib/
 ---
 
 For detailed usage examples, see each respective folder and check the code comments.
-<img width="1080" height="2400" alt="Screenshot_1762409431" src="https://github.com/user-attachments/assets/2d273207-0c4a-48b7-818e-eca0208a6ee0" />
-<img width="1080" height="2400" alt="Screenshot_1762408366" src="https://github.com/user-attachments/assets/4355746c-abc9-4c44-9840-87391a36918e" />
-<img width="1080" height="2400" alt="Screenshot_1762416480" src="https://github.com/user-attachments/assets/fad5b25b-e2bb-49f4-a385-0b49f89f163c" />
+
+== App ScreenShots ==
+<img width="390" height="844" alt="Screenshot_1762409431" src="https://github.com/user-attachments/assets/2d273207-0c4a-48b7-818e-eca0208a6ee0" />
+<img width="390" height="844" alt="Screenshot_1762408366" src="https://github.com/user-attachments/assets/4355746c-abc9-4c44-9840-87391a36918e" />
+<img width="390" height="844" alt="Screenshot_1762416480" src="https://github.com/user-attachments/assets/fad5b25b-e2bb-49f4-a385-0b49f89f163c" />
 
 
 
