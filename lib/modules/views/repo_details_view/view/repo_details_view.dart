@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:inilabs_task/core/utils/utility/helper_func.dart';
 import 'package:inilabs_task/models/repos_response/repos_response.dart';
 
 class RepoDetailsView extends StatelessWidget {
@@ -8,6 +9,8 @@ class RepoDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    // Arguments Data \\
     final repo = Get.arguments as ReposResponse;
 
     return Scaffold(
@@ -107,7 +110,7 @@ class RepoDetailsView extends StatelessWidget {
             if (repo.createdAt != null)
               _buildInfoCard(
                 'Created',
-                _formatDate(repo.createdAt!),
+                formatDate(repo.createdAt!),
                 Icons.calendar_today,
                 context,
               ),
@@ -115,7 +118,7 @@ class RepoDetailsView extends StatelessWidget {
             if (repo.updatedAt != null)
               _buildInfoCard(
                 'Last Updated',
-                _formatDate(repo.updatedAt!),
+                formatDate(repo.updatedAt!),
                 Icons.update,
                 context,
               ),
@@ -126,7 +129,7 @@ class RepoDetailsView extends StatelessWidget {
       ),
     );
   }
-
+  
   Widget _buildStatItem(
     IconData icon,
     String count,
@@ -205,24 +208,5 @@ class RepoDetailsView extends StatelessWidget {
     );
   }
 
-  Widget _buildChip(String label, IconData icon, BuildContext context) {
-    return Chip(
-      avatar: Icon(icon, size: 16),
-      label: Text(label),
-      backgroundColor: Theme.of(context).colorScheme.primary,
-      labelStyle: TextStyle(
-        fontSize: 12.sp,
-        color: Theme.of(context).colorScheme.primary,
-      ),
-    );
-  }
-
-  String _formatDate(String dateStr) {
-    try {
-      final date = DateTime.parse(dateStr);
-      return '${date.day}/${date.month}/${date.year}';
-    } catch (e) {
-      return dateStr;
-    }
-  }
+ 
 }

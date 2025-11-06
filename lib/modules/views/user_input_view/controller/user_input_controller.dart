@@ -18,6 +18,7 @@ class UserInputController extends GetxController {
   UserResponse? _userResponse;
   UserResponse get userResponse => _userResponse!;
 
+  // Fetch User Func. \\
   Future<bool> fetchUserData({required String userName}) async {
   try {
     _isLoading.value = true;

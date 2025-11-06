@@ -42,10 +42,12 @@ class HomeController extends GetxController {
     fetchRepositories(userName: userData.login ?? '');
     }
 
+  // Toogel Layer Func. \\
   void toggleView() {
     _isGridView.value = !_isGridView.value;
   }
 
+  // Featch Repositories Func. \\
   Future<bool> fetchRepositories({required String userName}) async {
   try {
     _isLoading.value = true;
@@ -73,6 +75,7 @@ class HomeController extends GetxController {
   }
 }
 
+  // Filter Func. \\
   void applyFilter(String filter) {
     _selectedFilter.value = filter;
     List<ReposResponse> tempList = List.from(_repositories);
@@ -99,6 +102,7 @@ class HomeController extends GetxController {
     _filteredRepositories.value = tempList;
   }
 
+  // Search Func. \\
   void searchRepositories(String query) {
     if (query.isEmpty) {
       _filteredRepositories.value = _repositories;

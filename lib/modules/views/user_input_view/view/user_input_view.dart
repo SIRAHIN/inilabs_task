@@ -35,6 +35,7 @@ class UserInputView extends GetView<UserInputController> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              // Logo Section \\
               Image.asset(
                 AssetsPaths.githubLogo,
                 width: 150.w,
@@ -50,6 +51,8 @@ class UserInputView extends GetView<UserInputController> {
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 48.h),
+
+              // Text Input Section \\
               Obx(
                 () => TextField(
                   controller: controller.userNameInputCtr,
@@ -65,6 +68,8 @@ class UserInputView extends GetView<UserInputController> {
                 ),
               ),
               SizedBox(height: 24.h),
+
+              // Submit Buttion Section \\
               Obx(
                 () => ElevatedButton(
                   onPressed: controller.isLoading
@@ -88,6 +93,7 @@ class UserInputView extends GetView<UserInputController> {
                             return;
                           }
 
+                          // Api Request Section \\
                           final success = await controller.fetchUserData(
                             userName: username,
                           );

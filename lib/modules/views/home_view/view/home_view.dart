@@ -28,6 +28,8 @@ class HomeView extends GetView<HomeController> {
           ),
         ),
         actions: [
+
+          // Chnage Layer Button \\
           Obx(
             () => IconButton(
               icon: Icon(
@@ -37,6 +39,8 @@ class HomeView extends GetView<HomeController> {
               onPressed: controller.toggleView,
             ),
           ),
+
+          // Filer Button Section \\
           PopupMenuButton<String>(
             icon: Icon(
               Icons.filter_list,
@@ -94,6 +98,8 @@ class HomeView extends GetView<HomeController> {
           ),
           Expanded(
             child: Obx(() {
+
+              // Loading Indicator \\
               if (controller.isLoading) {
                 return Center(
                   child: CircularProgressIndicator(
@@ -102,10 +108,12 @@ class HomeView extends GetView<HomeController> {
                 );
               }
 
+              // Error Response \\
               if (controller.errorMessage.isNotEmpty) {
                 return buildErrorWidget(controller);
               }
 
+              // Empty Data \\
               if (controller.filteredRepositories.isEmpty) {
                 return Center(
                   child: Text(
@@ -117,6 +125,7 @@ class HomeView extends GetView<HomeController> {
                 );
               }
 
+              // Featch Data \\
               return controller.isGridView
                   ? buildGridView(controller, context).backInLeft(
                     duration: Duration(milliseconds: 600)
