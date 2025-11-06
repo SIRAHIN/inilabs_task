@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:inilabs_task/modules/views/home_view/controller/home_view_controller.dart';
@@ -85,8 +86,12 @@ class HomeView extends GetView<HomeController> {
       ),
       body: Column(
         children: [
-          buildUserInfo(controller, context),
-          buildSearchBar(controller, context),
+          buildUserInfo(controller, context).fadeInDown(
+            duration: Duration(milliseconds: 600)
+          ),
+          buildSearchBar(controller, context).fadeInDownBig(
+            duration: Duration(milliseconds: 700)
+          ),
           Expanded(
             child: Obx(() {
               if (controller.isLoading) {
@@ -113,8 +118,12 @@ class HomeView extends GetView<HomeController> {
               }
 
               return controller.isGridView
-                  ? buildGridView(controller, context)
-                  : buildListView(controller, context);
+                  ? buildGridView(controller, context).backInLeft(
+                    duration: Duration(milliseconds: 600)
+                  )
+                  : buildListView(controller, context).backInRight(
+                    duration: Duration(milliseconds: 600)
+                  );
             }),
           ),
         ],
