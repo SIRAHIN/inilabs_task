@@ -6,6 +6,18 @@ This project is a Flutter application that allows users to search for a GitHub u
 
 ---
 
+## Flutter & SDK Version
+
+This project uses **FVM** (Flutter Version Management) for SDK consistency across developers and CI.  
+**Required FVM Flutter SDK Version:** `3.35.1`
+
+> **How to use FVM:**
+> 1. [Install FVM](https://fvm.app/docs/getting_started/installation) if you don’t have it installed.
+> 2. Run `fvm install` in the project root to download the correct Flutter version.
+> 3. Use FVM for running commands, e.g. `fvm flutter pub get`, `fvm flutter run`.
+
+---
+
 ## Principles
 
 - **Separation of Concerns**: Logic is separated into controllers, views, and models for maintainability.
@@ -55,7 +67,8 @@ lib/
 ├── core/
 │   └── utils/               # App-wide helpers, constants
 ├── data/
-│   └── repository/          # API and repository logic
+│   └── repository/          # repository logic
+|   └── api_service/         # API Implementation logic
 ├── injection.dart           # Dependency injection setup
 ├── main.dart                # App entry point
 ├── models/                  # Data models (GitHub user, repo, etc)
@@ -81,7 +94,7 @@ lib/
 - **get, get_storage**:  
   - State, routing, and simple persistent storage. Used in controllers (e.g., `UserInputController`, `HomeController`) and for navigation between views.
 - **dio, awesome_dio_interceptor**:  
-  - All API and HTTP logic (`data/repository/`). Interceptor for logging requests.
+  - All API and HTTP logic (`data/api_service/`). Interceptor for logging requests.
 - **flutter_screenutil**:  
   - Responsive UI in all views (e.g., `user_input_view.dart`, `home_view.dart`).
 - **injectable, get_it**:  
