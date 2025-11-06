@@ -3,7 +3,7 @@
      <!-- Permissions for internet_connection_checker -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
-        android:label="inilabs_task"
+        android:label="Find Git"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
