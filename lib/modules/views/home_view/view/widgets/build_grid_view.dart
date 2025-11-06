@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:inilabs_task/models/repos_response/repos_response.dart';
@@ -60,11 +61,11 @@ Widget _buildGridItem(ReposResponse repo, BuildContext context) {
                   size: 32,
                   color: Theme.of(context).colorScheme.primary,
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: 12.h),
                 Text(
                   repo.name ?? '',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 16.sp,
                     fontWeight: FontWeight.bold,
                   ),
                   maxLines: 2,
@@ -82,12 +83,12 @@ Widget _buildGridItem(ReposResponse repo, BuildContext context) {
                           shape: BoxShape.circle,
                         ),
                       ),
-                      const SizedBox(width: 4),
+                      SizedBox(width: 4.w),
                       Expanded(
                         child: Text(
                           repo.language ?? '',
                           style: TextStyle(
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             color: Theme.of(context).colorScheme.primary,
                           ),
                           maxLines: 1,
@@ -96,22 +97,22 @@ Widget _buildGridItem(ReposResponse repo, BuildContext context) {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: 8.h),
                 ],
                 Row(
                   children: [
                     Icon(Icons.star_border, size: 14, color: Theme.of(context).colorScheme.primary),
-                    const SizedBox(width: 4),
+                    SizedBox(width: 4.w),
                     Text(
                       '${repo.stargazersCount?? 0}',
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 12.sp,
                         color: Theme.of(context).colorScheme.primary,
                       ),
                     ),
                     const Spacer(),
                     Icon(Icons.call_split, size: 14, color: Theme.of(context).colorScheme.primary),
-                    const SizedBox(width: 4),
+                    SizedBox(width: 4.w),
                     Text(
                       '${repo.forksCount ?? 0}',
                       style: TextStyle(

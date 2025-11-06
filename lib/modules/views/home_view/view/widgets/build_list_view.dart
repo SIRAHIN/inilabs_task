@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:inilabs_task/models/repos_response/repos_response.dart';
@@ -57,13 +58,13 @@ Widget _buildListItem(ReposResponse repo, BuildContext context) {
                       size: 20,
                       color: Theme.of(context).colorScheme.primary,
                     ),
-                    const SizedBox(width: 8),
+                    SizedBox(width: 8.w),
                     Expanded(
                       child: Text(
                         repo.name ?? '',
                         style: TextStyle(
                           color: Theme.of(context).colorScheme.primary,
-                          fontSize: 16,
+                          fontSize: 16.sp,
                           fontWeight: FontWeight.bold,
                         ),
                         maxLines: 1,
@@ -77,51 +78,51 @@ Widget _buildListItem(ReposResponse repo, BuildContext context) {
                   Text(
                     repo.description ?? '',
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: 14.sp,
                       color: Theme.of(context).colorScheme.primary,
                     ),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
                 ],
-                const SizedBox(height: 12),
+                SizedBox(height: 12.h),
                 Row(
                   children: [
                     if (repo.language!= null) ...[
                       Container(
-                        width: 12,
-                        height: 12,
+                        width: 12.w,
+                        height: 12.h,
                         decoration: BoxDecoration(
                           color: Theme.of(context).colorScheme.primary,
                           shape: BoxShape.circle,
                         ),
                       ),
-                      const SizedBox(width: 4),
+                      SizedBox(width: 4.w),
                       Text(
                         repo.language ?? '',
                         style: TextStyle(
-                          fontSize: 12,
+                          fontSize: 12.sp,
                           color: Theme.of(context).colorScheme.primary,
                         ),
                       ),
                       const SizedBox(width: 16),
                     ],
                     Icon(Icons.star_border, size: 16, color: Theme.of(context).colorScheme.primary),
-                    const SizedBox(width: 4),
+                    SizedBox(width: 4.w),
                     Text(
                       '${repo.stargazersCount ?? 0}',
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 12.sp,
                         color: Theme.of(context).colorScheme.primary,
                       ),
                     ),
-                    const SizedBox(width: 16),
+                    SizedBox(width: 16.w),
                     Icon(Icons.call_split, size: 16, color: Theme.of(context).colorScheme.primary),
-                    const SizedBox(width: 4),
+                    SizedBox(width: 4.w),
                     Text(
                       '${repo.forksCount ?? 0}',
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 12.sp,
                         color: Theme.of(context).colorScheme.primary,
                       ),
                     ),

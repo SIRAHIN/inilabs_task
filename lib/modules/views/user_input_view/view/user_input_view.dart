@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:inilabs_task/models/user_response/user_response.dart';
 import 'package:inilabs_task/modules/views/user_input_view/controller/user_input_controller.dart';
 import 'package:inilabs_task/routes/routes_name.dart';
 
@@ -29,17 +29,17 @@ class UserInputView extends GetView<UserInputController> {
       ),
       body: Center(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.all(24.0),
+          padding:  EdgeInsets.all(24.0.r),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Icon(
                 Icons.person_search,
-                size: 80,
+                size: 80.r,
                 color: theme.colorScheme.primary,
               ),
-              const SizedBox(height: 32),
+              SizedBox(height: 32.h),
               Text(
                 'Find GitHub User',
                 style: theme.textTheme.headlineMedium?.copyWith(
@@ -47,7 +47,7 @@ class UserInputView extends GetView<UserInputController> {
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 48),
+              SizedBox(height: 48.h),
               Obx(
                 () => TextField(
                   controller: controller.userNameInputCtr,
@@ -56,13 +56,13 @@ class UserInputView extends GetView<UserInputController> {
                     hintText: 'Enter username',
                     prefixIcon: const Icon(Icons.person),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(12.r),
                     ),
                   ),
                   enabled: !controller.isLoading,
                 ),
               ),
-              const SizedBox(height: 24),
+              SizedBox(height: 24.h),
               Obx(
                 () => ElevatedButton(
                   onPressed: controller.isLoading
@@ -113,9 +113,9 @@ class UserInputView extends GetView<UserInputController> {
                     ),
                   ),
                   child: controller.isLoading
-                      ? const SizedBox(
-                          height: 20,
-                          width: 20,
+                      ?  SizedBox(
+                          height: 20.h,
+                          width: 20.h,
                           child: CircularProgressIndicator(
                             strokeWidth: 2,
                             valueColor: AlwaysStoppedAnimation<Color>(
@@ -123,7 +123,7 @@ class UserInputView extends GetView<UserInputController> {
                             ),
                           ),
                         )
-                      : const Text('Search', style: TextStyle(fontSize: 16)),
+                      : Text('Search', style: TextStyle(fontSize: 16.sp)),
                 ),
               ),
             ],
