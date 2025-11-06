@@ -17,7 +17,7 @@ class HomeView extends GetView<HomeController> {
       appBar: AppBar(
         foregroundColor: Theme.of(context).colorScheme.primary,
         automaticallyImplyLeading: true,
-        elevation: 0,
+        elevation: 5,
         backgroundColor: Theme.of(context).colorScheme.surface,
         title: Text(
           'Repositories',

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:inilabs_task/models/repos_response/repos_response.dart';
 import 'package:inilabs_task/modules/views/home_view/controller/home_view_controller.dart';
+import 'package:inilabs_task/routes/routes_name.dart';
 
 Widget buildListView(HomeController controller, BuildContext context) {
     return RefreshIndicator(
@@ -24,6 +27,7 @@ Widget _buildListItem(ReposResponse repo, BuildContext context) {
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surface,
         borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Theme.of(context).colorScheme.primary, width: .5),
         boxShadow: [
           BoxShadow(
             color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
@@ -33,11 +37,13 @@ Widget _buildListItem(ReposResponse repo, BuildContext context) {
         ],
       ),
       child: Material(
+         borderRadius: BorderRadius.all(Radius.circular(12)),
         color: Theme.of(context).colorScheme.surface,
         child: InkWell(
           borderRadius: BorderRadius.circular(12),
           onTap: () {
             // Navigate to repo details
+            Get.toNamed(RoutesName.repoDetailsView, arguments: repo);
           },
           child: Padding(
             padding: const EdgeInsets.all(16),
