@@ -1,9 +1,10 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:inilabs_task/core/utils/constants/assets_paths.dart';
 import 'package:inilabs_task/modules/views/user_input_view/controller/user_input_controller.dart';
 import 'package:inilabs_task/routes/routes_name.dart';
-
 
 class UserInputView extends GetView<UserInputController> {
   const UserInputView({super.key});
@@ -29,16 +30,17 @@ class UserInputView extends GetView<UserInputController> {
       ),
       body: Center(
         child: SingleChildScrollView(
-          padding:  EdgeInsets.all(24.0.r),
+          padding: EdgeInsets.all(24.0.r),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Icon(
-                Icons.person_search,
-                size: 80.r,
+              Image.asset(
+                AssetsPaths.githubLogo,
+                width: 150.w,
+                height: 150.h,
                 color: theme.colorScheme.primary,
-              ),
+              ).elasticIn(duration: Duration(milliseconds: 800)),
               SizedBox(height: 32.h),
               Text(
                 'Find GitHub User',
@@ -71,7 +73,7 @@ class UserInputView extends GetView<UserInputController> {
                           final username = controller.userNameInputCtr.text
                               .trim();
 
-                          controller.userNameInputCtr.clear();    
+                          controller.userNameInputCtr.clear();
 
                           if (username.isEmpty) {
                             Get.snackbar(
@@ -115,7 +117,7 @@ class UserInputView extends GetView<UserInputController> {
                     ),
                   ),
                   child: controller.isLoading
-                      ?  SizedBox(
+                      ? SizedBox(
                           height: 20.h,
                           width: 20.h,
                           child: CircularProgressIndicator(
