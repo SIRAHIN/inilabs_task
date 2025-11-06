@@ -118,24 +118,30 @@ lib/
 
 For detailed usage examples, see each respective folder and check the code comments.
 
-== App ScreenShots ==
-== Splash ==
-<img width="360" height="640" alt="splash" src="https://github.com/user-attachments/assets/b1fd4d25-1053-4ed5-bf83-1fe81bf5b40a" />
+# App Screenshots
 
-== User Input Page (Light & Dark) ==
-<img width="360" height="640" alt="input_light" src="https://github.com/user-attachments/assets/cf77fbfb-68a5-4258-b2a3-b1d073c1e206" />
+## Splash Screen
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b1fd4d25-1053-4ed5-bf83-1fe81bf5b40a" alt="Splash Screen" width="250"/>
+</p>
 
-<img width="360" height="640" alt="input_dark" src="https://github.com/user-attachments/assets/517b1d6e-c216-4248-bbc6-4d14dc4a3f03" />
+## User Input Page
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cf77fbfb-68a5-4258-b2a3-b1d073c1e206" alt="Input Light Mode" width="250"/>
+  <img src="https://github.com/user-attachments/assets/517b1d6e-c216-4248-bbc6-4d14dc4a3f03" alt="Input Dark Mode" width="250"/>
+</p>
 
-== User Profile Page (Light & Dark) ==
-<img width="360" height="640" alt="profile_light" src="https://github.com/user-attachments/assets/a0ba99f9-c848-45d1-84f4-dd555aad4df3" />
+## User Profile Page
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a0ba99f9-c848-45d1-84f4-dd555aad4df3" alt="Profile Light Mode" width="250"/>
+  <img src="https://github.com/user-attachments/assets/9b989f40-6f8e-49fb-99b7-80e009a0f181" alt="Profile Dark Mode" width="250"/>
+</p>
 
-<img width="360" height="640" alt="profile_dark" src="https://github.com/user-attachments/assets/9b989f40-6f8e-49fb-99b7-80e009a0f181" />
-
-== Repo Details Page (Light & Dark) ==
-<img width="360" height="640" alt="details_light" src="https://github.com/user-attachments/assets/8710824f-7008-40b7-8a04-8f1517d641d7" />
-
-<img width="360" height="640" alt="details_dark" src="https://github.com/user-attachments/assets/f74652c3-0d0a-4420-bef9-8ff66584ed89" />
+## Repository Details Page
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8710824f-7008-40b7-8a04-8f1517d641d7" alt="Details Light Mode" width="250"/>
+  <img src="https://github.com/user-attachments/assets/f74652c3-0d0a-4420-bef9-8ff66584ed89" alt="Details Dark Mode" width="250"/>
+</p>
 
 
 
