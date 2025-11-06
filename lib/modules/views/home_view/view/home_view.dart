@@ -13,32 +13,70 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[50],
+      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
-        title: const Text(
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        title: Text(
           'Repositories',
-          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            color: Theme.of(context).colorScheme.primary,
+            fontWeight: FontWeight.bold,
+          ),
         ),
         actions: [
           Obx(
             () => IconButton(
               icon: Icon(
                 controller.isGridView ? Icons.view_list : Icons.grid_view,
-                color: Colors.black87,
+                color: Theme.of(context).colorScheme.primary,
               ),
               onPressed: controller.toggleView,
             ),
           ),
           PopupMenuButton<String>(
-            icon: const Icon(Icons.filter_list, color: Colors.black87),
+            icon: Icon(
+              Icons.filter_list,
+              color: Theme.of(context).colorScheme.primary,
+            ),
             onSelected: controller.applyFilter,
             itemBuilder: (context) => [
-              const PopupMenuItem(value: 'Recent', child: Text('Recent')),
-              const PopupMenuItem(value: 'Name', child: Text('Name')),
-              const PopupMenuItem(value: 'Stars', child: Text('Stars')),
-              const PopupMenuItem(value: 'Forks', child: Text('Forks')),
+              PopupMenuItem(
+                value: 'Recent',
+                child: Text(
+                  'Recent',
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                ),
+              ),
+              PopupMenuItem(
+                value: 'Name',
+                child: Text(
+                  'Name',
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                ),
+              ),
+              PopupMenuItem(
+                value: 'Stars',
+                child: Text(
+                  'Stars',
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                ),
+              ),
+              PopupMenuItem(
+                value: 'Forks',
+                child: Text(
+                  'Forks',
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                ),
+              ),
             ],
           ),
         ],
@@ -50,7 +88,11 @@ class HomeView extends GetView<HomeController> {
           Expanded(
             child: Obx(() {
               if (controller.isLoading) {
-                return const Center(child: CircularProgressIndicator());
+                return Center(
+                  child: CircularProgressIndicator(
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                );
               }
 
               if (controller.errorMessage.isNotEmpty) {
@@ -58,7 +100,14 @@ class HomeView extends GetView<HomeController> {
               }
 
               if (controller.filteredRepositories.isEmpty) {
-                return const Center(child: Text('No repositories found'));
+                return Center(
+                  child: Text(
+                    'No repositories found',
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                  ),
+                );
               }
 
               return controller.isGridView
