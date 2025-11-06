@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:inilabs_task/core/utils/utility/app_theme.dart';
@@ -15,6 +16,9 @@ void main() async {
 
   //portrait orientation\\
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
+  // Load environment variables\\
+  await dotenv.load(fileName: ".env");
 
   runApp(const MyApp());
 }

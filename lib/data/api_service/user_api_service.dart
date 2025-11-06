@@ -2,6 +2,7 @@ import 'package:awesome_dio_interceptor/awesome_dio_interceptor.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:inilabs_task/core/env/env.dart';
 import 'package:inilabs_task/core/utils/constants/app_url.dart';
 import 'package:inilabs_task/models/error_response/error_response.dart';
 import 'package:inilabs_task/models/repos_response/repos_response.dart';
@@ -27,6 +28,9 @@ abstract class UserApiService {
       receiveTimeout: const Duration(seconds: 10),
       responseType: ResponseType.json,
       contentType: "application/json",
+      headers: {
+        'Authorization': 'Bearer ${Env.apiKey}',
+      },
     ),
   );
 
