@@ -44,4 +44,11 @@ class UserInputController extends GetxController {
     return false;
   }
 }
+
+ @override
+  void dispose(){
+    super.dispose();
+    userNameInputCtr.clear();
+    userNameInputCtr.dispose();
+ }
 }

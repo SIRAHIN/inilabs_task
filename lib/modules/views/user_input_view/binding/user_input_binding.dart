@@ -5,6 +5,6 @@ class UserInputBinding extends Bindings {
   @override
   void dependencies() {
     // TODO: implement dependencies
-    Get.lazyPut(() => UserInputController(), fenix: true);
+    Get.lazyPut(() => UserInputController(), fenix: false);
   }
 }

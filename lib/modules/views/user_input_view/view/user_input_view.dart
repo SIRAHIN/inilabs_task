@@ -71,6 +71,8 @@ class UserInputView extends GetView<UserInputController> {
                           final username = controller.userNameInputCtr.text
                               .trim();
 
+                          controller.userNameInputCtr.clear();    
+
                           if (username.isEmpty) {
                             Get.snackbar(
                               'Error',
