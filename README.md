@@ -3,13 +3,13 @@
   <h1>inilabs_task</h1>
 </p>
 
-## 🚀 Overview
+## 🚀 Project Overview
 
 This project is a <img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.svg" height="24" valign="middle" alt="Flutter Logo"> Flutter application that allows users to search for a <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="24" valign="middle" alt="GitHub Logo"> GitHub user and view their repositories. The app displays repositories in both grid and list views with filtering and detail options.
 
 ---
 
-## ✨ Principles
+## ✨ Core Principles
 
 - 🛠️ **Separation of Concerns**: Logic is separated into controllers, views, and models for maintainability.
 - 🔁 **Reactive Programming**: Uses the <img src="https://raw.githubusercontent.com/jonataslaw/getx-community/master/docs/assets/getx_icon.png" height="18" valign="middle"> `GetX` package's observables and reactive state updates.
@@ -19,16 +19,16 @@ This project is a <img src="https://storage.googleapis.com/cms-storage-bucket/0d
 
 ---
 
-## 🌐 API Used
+## 🌐 API Reference
 
 - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="20" alt="GitHub Logo"> **GitHub REST API v3**  
   Retrieves user profile data and repositories:  
-  - [User API](https://docs.github.com/en/rest/users/users)
-  - [Repos API](https://docs.github.com/en/rest/repos/repos)
+  - User API
+  - Repos API
 
 ---
 
-## 📦 Packages Used
+## 📦 Main Packages Used
 
 > All dependencies can be found in `pubspec.yaml`.
 
@@ -51,7 +51,7 @@ This project is a <img src="https://storage.googleapis.com/cms-storage-bucket/0d
 
 ---
 
-## 🗂️ Folder Structure
+## 🗂️ Project Folder Structure
 
 ```plaintext
 lib/
@@ -79,7 +79,7 @@ lib/
 
 ---
 
-## 🧭 Where Each Package/Principle Is Used
+## 🧭 Package & Principle Usage Guide
 
 - <img src="https://raw.githubusercontent.com/jonataslaw/getx-community/master/docs/assets/getx_icon.png" height="16"> **get**, <img src="https://img.icons8.com/ios-filled/30/000000/hdd.png" height="16"> **get_storage**:  
   - State, routing, and simple persistent storage. Used in controllers (e.g., `UserInputController`, `HomeController`) and for navigation between views.
