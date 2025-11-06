@@ -18,7 +18,7 @@ class RepoDetailsView extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           repo.name ?? 'Repository',
-          style: TextStyle(color: Theme.of(context).colorScheme.primary),
+          style: TextStyle(color: Theme.of(context).colorScheme.onSecondary),
         ),
         elevation: 0,
         automaticallyImplyLeading: true,
